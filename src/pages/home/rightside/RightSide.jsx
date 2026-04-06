@@ -23,8 +23,8 @@ const RightSide = () => {
 				<div id="yoyo">
 					<motion.div
 						initial={{
-							x: 250,
-							y: 250,
+							x: 500,
+							y: 500,
 						}}
 						animate={{
 							x: 0,
@@ -32,6 +32,10 @@ const RightSide = () => {
 						}}
 						whileTap={{
 							scale: 0.7,
+						}}
+						transition={{
+							delay:1,
+							duration:0.3,
 						}}
 					>
 						<Linkedin />
@@ -40,8 +44,8 @@ const RightSide = () => {
 				<div id="yoyo">
 					<motion.div
 						initial={{
-							x: -250,
-							y: -250,
+							x: -500,
+							y: -500,
 						}}
 						animate={{
 							x: 0,
@@ -49,6 +53,10 @@ const RightSide = () => {
 						}}
 						whileTap={{
 							scale: 0.7,
+						}}
+						transition={{
+							delay:1,
+							duration:0.3,
 						}}
 					>
 						<Github />
@@ -58,8 +66,8 @@ const RightSide = () => {
 				<div id="yoyo">
 					<motion.div
 						initial={{
-							x: 250,
-							y: 250,
+							x: 500,
+							y: 500,
 						}}
 						animate={{
 							x: 0,
@@ -67,6 +75,10 @@ const RightSide = () => {
 						}}
 						whileTap={{
 							scale: 0.7,
+						}}
+						transition={{
+							delay:1,
+							duration:0.3,
 						}}
 					>
 						<Whatsapp />
@@ -76,8 +88,8 @@ const RightSide = () => {
 				<div id="yoyo">
 					<motion.div
 						initial={{
-							x: -250,
-							y: -250,
+							x: -500,
+							y: -500,
 						}}
 						animate={{
 							x: 0,
@@ -85,6 +97,10 @@ const RightSide = () => {
 						}}
 						whileTap={{
 							scale: 0.7,
+						}}
+						transition={{
+							delay:1,
+							duration:0.3,
 						}}
 					>
 						<Phone />
