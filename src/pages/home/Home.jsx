@@ -4,49 +4,61 @@ import RightSide from "./rightside/RightSide";
 
 const Home = () => {
 	return (
-		<div className="">
-			<section className="flex -my-15 justify-around">
+		<div>
+			{/* HERO */}
+			<section
+				id="home-hero"
+				className="
+					flex flex-col-reverse md:flex-row 
+					items-center justify-between 
+				"
+			>
 				{/* left side */}
-				<LeftSide />
+				<div className="w-full md:w-1/2">
+					<LeftSide />
+				</div>
 
 				{/* right side */}
-				<RightSide />
+				<div className="w-full md:w-1/2 flex justify-center">
+					<RightSide />
+				</div>
 			</section>
 
-			<section className="py-20 px-6 max-w-6xl mx-auto">
-				<h2 className="text-3xl font-bold text-center mb-12 text-white">
-					What I Do
+			{/* WHAT I DO */}
+			<section className="py-16 md:py-20 px-6 max-w-6xl mx-auto">
+				<h2 className="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-12 text-white">
+					What I Do ...
 				</h2>
 
-				<div className="grid md:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 					{/* Web Dev */}
-					<div className="bg-[#111827] p-6 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition">
-						<h3 className="text-xl font-semibold text-blue-400 mb-3">
+					<div className="bg-[#111827] p-5 md:p-6 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition">
+						<h3 className="text-lg md:text-xl font-semibold text-blue-400 mb-3">
 							💻 Web Development
 						</h3>
-						<p className="text-gray-400">
+						<p className="text-gray-400 text-sm md:text-base">
 							I create modern, responsive websites using React and
 							Tailwind CSS with clean UI and smooth user experience.
 						</p>
 					</div>
 
 					{/* Design */}
-					<div className="bg-[#111827] p-6 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition">
-						<h3 className="text-xl font-semibold text-blue-400 mb-3">
+					<div className="bg-[#111827] p-5 md:p-6 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition">
+						<h3 className="text-lg md:text-xl font-semibold text-blue-400 mb-3">
 							🎨 Design Services
 						</h3>
-						<p className="text-gray-400">
+						<p className="text-gray-400 text-sm md:text-base">
 							I design brochures, business cards, and invitation cards
 							tailored to your brand using Canva.
 						</p>
 					</div>
 
 					{/* Dashboard */}
-					<div className="bg-[#111827] p-6 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition">
-						<h3 className="text-xl font-semibold text-blue-400 mb-3">
+					<div className="bg-[#111827] p-5 md:p-6 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition">
+						<h3 className="text-lg md:text-xl font-semibold text-blue-400 mb-3">
 							📊 Smart Dashboards
 						</h3>
-						<p className="text-gray-400">
+						<p className="text-gray-400 text-sm md:text-base">
 							I build advanced tracking dashboards for habits, expenses,
 							fitness, and income with analytics and customization.
 						</p>
@@ -55,31 +67,31 @@ const Home = () => {
 			</section>
 
 			{/* PROJECTS */}
-			<section className="py-20 px-6 bg-[#111827]">
-				<h2 className="text-3xl font-bold text-center mb-10 text-white">
+			<section className="py-16 md:py-20 px-6 bg-[#111827] text-center">
+				<h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-10 text-white">
 					Featured Projects
 				</h2>
 
-				<div className="text-center text-gray-400 mb-6">
+				<p className="text-gray-400 mb-6 text-sm md:text-base">
 					Portfolio Website • Dashboard Systems • Business Designs
-				</div>
+				</p>
 
-				<div className="text-center">
-					<button className="px-6 py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
-						View All Projects
-					</button>
-				</div>
+				<button className="px-5 md:px-6 py-2.5 md:py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
+					View All Projects
+				</button>
 			</section>
 
 			{/* SERVICES */}
-			<section className="py-20 px-6 max-w-5xl mx-auto text-center">
-				<h2 className="text-3xl font-bold mb-10 text-white">Services</h2>
+			<section className="py-16 md:py-20 px-6 max-w-5xl mx-auto text-center">
+				<h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-white">
+					Services
+				</h2>
 
-				<div className="space-y-6 text-gray-400">
+				<div className="space-y-5 md:space-y-6 text-gray-400 text-sm md:text-base">
 					<p>
 						<span className="text-blue-400 font-semibold">
 							Website Development:
-						</span>
+						</span>{" "}
 						Custom responsive websites with modern UI.
 					</p>
 
@@ -104,12 +116,12 @@ const Home = () => {
 			</section>
 
 			{/* WHY ME */}
-			<section className="py-20 px-6 bg-[#111827] text-center">
-				<h2 className="text-3xl font-bold mb-6 text-white">
+			<section className="py-16 md:py-20 px-6 bg-[#111827] text-center">
+				<h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-white">
 					Why Choose Me
 				</h2>
 
-				<p className="max-w-2xl mx-auto text-gray-400">
+				<p className="max-w-2xl mx-auto text-gray-400 text-sm md:text-base">
 					I focus on building solutions that are not just visually clean,
 					but also practical and useful in real life. Every project is
 					created with attention to detail, usability, and performance.
@@ -117,16 +129,16 @@ const Home = () => {
 			</section>
 
 			{/* CTA */}
-			<section className="py-20 px-6 text-center">
-				<h2 className="text-3xl font-bold mb-4 text-white">
+			<section className="py-16 md:py-20 px-6 text-center">
+				<h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
 					Let’s Work Together
 				</h2>
 
-				<p className="text-gray-400 mb-6">
+				<p className="text-gray-400 mb-6 text-sm md:text-base">
 					Have an idea, need a website, or want a custom dashboard?
 				</p>
 
-				<button className="px-6 py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
+				<button className="px-5 md:px-6 py-2.5 md:py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
 					Contact Me
 				</button>
 			</section>
