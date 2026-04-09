@@ -1,116 +1,125 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
 const Projects = () => {
 	const projectList = [
 		{
 			title: "Portfolio Website",
-			client: "Personal Portfolio of 2025",
+			client: "My Portfolio in 2025",
 			webLink: "https://mirfeez.github.io/Mirfeez-portfolio/",
-			info: "My first responsive and performance-focused portfolio website built to showcase design projects with a clean UI using tools like HTML, CSS and JS and a professional online presence.",
+			info: "My first responsive portfolio with clean UI using HTML, CSS & JS.",
 		},
 		{
-			title: "Age difference check",
-			client: "Benificial Project",
+			title: "Age Difference Checker",
+			client: "Utility Project",
 			webLink: "https://mirfeez.github.io/p1-difference/",
-			info: "This is an fun project to showcase the age difference between 2 person (friends or couples). and also can check single person's age with seconds (like how much seconds did i live.",
+			info: "Check age difference between two people or calculate your exact age.",
 		},
 		{
-			title: "Body fat % check",
-			client: "benificial project",
+			title: "Body Fat Calculator",
+			client: "Health Tool",
 			webLink: "https://mirfeez.github.io/p2-calculate-body-fat/",
-			info: "this is an project that shows your body fat percentage using US Method nad BMI Method. all we have to put some inputs. This project is for both male and female",
+			info: "Calculate body fat using US Navy & BMI methods.",
 		},
 		{
-			title: "A rotating clock",
-			client: "fun & challenging",
+			title: "Rotating Clock",
+			client: "Fun Project",
 			webLink: "https://mirfeez.github.io/p3-clock/",
-			info: "This project is challenging project for me. this is an simple rotating clock that gives you exact time of your device. this project's design was taken insipirations from youtube and ai ",
+			info: "A real-time rotating clock inspired by creative UI designs.",
 		},
 		{
-			title: "A Calculator",
-			client: "Fun & Challenging",
+			title: "Calculator",
+			client: "CASIO Inspired",
 			webLink: "https://mirfeez.github.io/p4-calculator/",
-			info: "A Calculator from brand called CASIO. I had an calculator which i used from 2021. i have created an exact same calculator using HTML, CSS and then created its engine using JS.",
+			info: "A functional calculator inspired by CASIO design.",
 		},
 		{
 			title: "Love Calculator",
 			client: "Fun Project",
 			webLink: "https://p5-love-calculator.onrender.com/",
-			info: "This is love calculator which i used to play in my school days with my friends. we used to calculate using pen & paper by wasting a lot papers and time, so i decided to create one using html, css, js. And this project has 🤫.",
+			info: "A fun calculator built with HTML, CSS & JS.",
 		},
 		{
-			title: "Freelancing site",
+			title: "Freelancing Website",
 			client: "DigiPixelTech",
 			webLink: "https://digipixeltechh.netlify.app/",
-			info: "I'm an freelancer, I have created my freelancing website with the help of my co-worker. this is responsive and created by using React.",
+			info: "A responsive freelancing website built with React.",
 		},
 	];
+
 	return (
-		<div id="Projects">
+		<section id="projects" className="px-6 py-16 max-w-7xl mx-auto">
+			{/* Title */}
 			<motion.h1
-				initial={{
-					x: 50,
-					opacity: 0,
-				}}
-				animate={{
-					x: 0,
-					opacity: 1,
-				}}
-				className="text-3xl flex justify-self-center font-bold text-blue-400"
+				initial={{ opacity: 0, y: -30 }}
+				animate={{ opacity: 1, y: 0 }}
+				className="text-3xl md:text-4xl font-bold text-center text-blue-400 mb-12"
 			>
-				My Projects ...
+				My Projects
 			</motion.h1>
-			{projectList.map((props, idx) => {
-				return (
+
+			{/* Grid */}
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+				{projectList.map((project, idx) => (
 					<motion.div
-						initial={{
-							x: -50,
-							opacity: 0,
+						key={idx}
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						whileHover={{
+							y: -8,
+							scale: 1.02,
+							boxShadow: "0 15px 30px rgba(59,130,246,0.2)",
 						}}
-						animate={{
-							x: 0,
-							opacity: 1,
-						}}
-						key={idx + 1}
-						className="m-10 h-150 rounded"
+						className="
+							bg-zinc-900 
+							border border-zinc-700 
+							rounded-2xl 
+							overflow-hidden 
+							flex flex-col
+						"
 					>
-						<div className="h-100 w-150 flex flex-col justify-self-center rounded-2xl shadow-black shadow-2xl overflow-hidden">
-							<iframe
-								className=" rounded h-70"
-								src={props.webLink}
-							></iframe>
-							<h1 className="text-xl mt-5">
-								<span className="flex justify-self-center font-mono items-center">
-									<span className=" text-black rounded-full w-5 h-5 text-center font-semibold  text-sm bg-blue-400 mr-1">
-										{idx + 1}
-									</span>
-									<span>{props.title}</span>
-								</span>
-							</h1>
+						{/* Preview */}
+						<iframe
+							src={project.webLink}
+							title={project.title}
+							className="w-full h-48 border-none"
+						/>
+
+						{/* Content */}
+						<div className="p-4 flex flex-col gap-3 flex-1">
+							<h2 className="text-lg font-semibold text-white">
+								{idx + 1}. {project.title}
+							</h2>
+
+							<p className="text-sm text-zinc-400">{project.client}</p>
+
+							<p className="text-sm text-zinc-500 flex-1">
+								{project.info}
+							</p>
+
+							{/* Button */}
 							<a
+								href={project.webLink}
 								target="_blank"
-								href={props.webLink}
-								className=" mt-2 cursor-pointer"
+								rel="noopener noreferrer"
+								className="
+									mt-3 text-center 
+									px-4 py-2 
+									bg-blue-400 
+									text-black 
+									font-medium 
+									rounded-lg 
+									hover:bg-blue-500 
+									transition-colors
+								"
 							>
-								<span 
-									className="featured-project justify-self-center flex px-4 py-2 rounded text-black bg-blue-400 font-bold hover:bg-white hover:text-black hover:rounded-4xl transition-all duration-500"
-								>
-									View Live
-								</span>
+								View Demo
 							</a>
 						</div>
-						<div className="project-info m-3 text-center border-b-2 py-3 pb-8">
-							<h1 className="text-2xl mb-2 justify-self-center">
-								{props.client}
-							</h1>
-							<p className="parah text-gray-400">{props.info}</p>
-						</div>
 					</motion.div>
-				);
-			})}
-		</div>
+				))}
+			</div>
+		</section>
 	);
 };
 

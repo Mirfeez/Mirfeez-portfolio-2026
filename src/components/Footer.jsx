@@ -1,7 +1,8 @@
-import React from "react";
+import { FaLocationDot, FaSquarePhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
-   return (
+	return (
 		<footer className="bg-[#0B0F1A] text-gray-300 px-6 py-10 mt-20">
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
 				{/* Left */}
@@ -9,10 +10,39 @@ const Footer = () => {
 					<h1 className="text-2xl font-bold text-blue-400 mb-2">
 						&lt;Mirfeez /&gt;
 					</h1>
+					<p>Frontend Developer.</p>
 					<p className="text-sm text-gray-400">
-						Building modern web experiences with clean UI and smooth
-						animations.
+						Open to freelance & full-time opportunities. Let’s build
+						something amazing together
 					</p>
+					<div className="m-2 flex hover:text-white pointer">
+						<span className="m-1">
+							<FaLocationDot />
+						</span>
+						<a
+							href="https://www.google.com/maps?q=Mangalore"
+							target="_blank"
+							rel="noopener noreferrer"
+							className=""
+						>
+							{" "}
+							Mangalore, India
+						</a>
+					</div>
+					<div className="m-2 flex hover:text-white pointer">
+						<span className="m-1">
+							<FaSquarePhone />
+						</span>
+						<a href="tel:+916360836891">+91 63608 36891</a>
+					</div>
+					<div className="m-2 flex hover:text-white pointer">
+						<span className="m-1">
+							<MdEmail />
+						</span>
+						<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahammadmirfeez@gmail.com">
+							mahammadmirfeez@gmail.com
+						</a>
+					</div>
 				</div>
 
 				{/* Center */}
@@ -31,12 +61,6 @@ const Footer = () => {
 						Contact
 					</a>
 				</div>
-
-				{/* Right */}
-				<div>
-					<h2 className="text-white font-semibold mb-2">Connect</h2>
-				
-				</div>
 			</div>
 
 			{/* Bottom */}
@@ -45,6 +69,6 @@ const Footer = () => {
 			</div>
 		</footer>
 	);
-}
+};
 
 export default Footer;

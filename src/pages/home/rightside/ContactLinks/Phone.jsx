@@ -10,7 +10,7 @@ const Phone = () => {
 				borderRadius:'50%'
 			}}
 			transition={{ type: "spring", stiffness: 200 }}
-			className="w-8 h-8 border-2 border-blue-400 flex justify-center items-center hover:bg-blue-400 hover:text-black text-green-400 rounded-br-lg rounded-tl-sm 
+			className="w-8 h-8 border-2 border-blue-400 flex justify-center items-center hover:bg-blue-400 hover:text-black  rounded-br-lg rounded-tl-sm  text-red-600
 			"
 		>
 			<a target="_blank" href="tel:+916360836891">

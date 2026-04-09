@@ -1,6 +1,7 @@
 import React from "react";
 import LeftSide from "./LeftSide";
 import RightSide from "./rightside/RightSide";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 	return (
@@ -66,21 +67,6 @@ const Home = () => {
 				</div>
 			</section>
 
-			{/* PROJECTS */}
-			<section className="py-16 md:py-20 px-6 bg-[#111827] text-center">
-				<h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-10 text-white">
-					Featured Projects
-				</h2>
-
-				<p className="text-gray-400 mb-6 text-sm md:text-base">
-					Portfolio Website • Dashboard Systems • Business Designs
-				</p>
-
-				<button className="px-5 md:px-6 py-2.5 md:py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
-					View All Projects
-				</button>
-			</section>
-
 			{/* SERVICES */}
 			<section className="py-16 md:py-20 px-6 max-w-5xl mx-auto text-center">
 				<h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-white">
@@ -138,9 +124,9 @@ const Home = () => {
 					Have an idea, need a website, or want a custom dashboard?
 				</p>
 
-				<button className="px-5 md:px-6 py-2.5 md:py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
+				<Link to='/contact' className="px-5 md:px-6 py-2.5 md:py-3 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition">
 					Contact Me
-				</button>
+				</Link>
 			</section>
 		</div>
 	);

@@ -67,12 +67,10 @@ const LeftSide = () => {
 				</motion.p>
 
 				<div className="flex gap-4">
-					<Link to='/works' className="px-6 py-3 bg-blue-400 text-black rounded-lg font-medium hover:bg-blue-500 transition">
-						View Projects
+					<Link to='/works' className="px-6 py-3 bg-blue-400 text-black rounded-lg font-bold hover:bg-black transition hover:text-blue-400 hover:border-2 hover:border-blue-400 hover:shadow-md hover:shadow-blue-400">
+						View My Work
 					</Link>
-					<button className="px-6 py-3 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400 hover:text-black transition">
-						Explore Services
-					</button>
+					
 				</div>
 			</section>
 

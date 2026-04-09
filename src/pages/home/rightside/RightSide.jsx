@@ -7,6 +7,7 @@ import { easeIn, easeInOut, motion } from "motion/react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { FaArrowAltCircleDown } from "react-icons/fa";
+import Mail from './ContactLinks/Mail';
 
 const RightSide = () => {
 
@@ -23,7 +24,7 @@ const RightSide = () => {
 
 		gsap.to("#rotate", {
 			rotate: 360,
-			duration: 4,
+			duration: 5,
 		});
 
 		gsap.to("#line", {
@@ -42,12 +43,13 @@ const RightSide = () => {
 			<div>
 				<motion.div
 					initial={{
-						x: 500,
+						x: -120,
 						y: 500,
+						
 					}}
 					animate={{
-						x: -50,
-						y: 0,
+						x: 5,
+						y: -35,
 						scale:1.5,
 					}}
 					whileTap={{
@@ -67,13 +69,14 @@ const RightSide = () => {
 			<div>
 				<motion.div
 					initial={{
-						x: -500,
-						y: -500,
+						x: 500,
+						y: 500,
+						
 					}}
 					animate={{
-						x: 35,
+						x: -10,
+						y: 115,
 						scale:1.5,
-						y: -150,
 					}}
 					whileTap={{
 						scale: 0.7,
@@ -95,12 +98,13 @@ const RightSide = () => {
 			<div>
 				<motion.div
 					initial={{
-						x: 500,
-						y: 500,
+						x: -500,
+						y: 100,
+						
 					}}
 					animate={{
-						x: -35,
-						y: 150,
+						x: 0,
+						y: -150,
 						scale:1.5,
 					}}
 					whileTap={{
@@ -118,12 +122,12 @@ const RightSide = () => {
 			<div>
 				<motion.div
 					initial={{
-						x: -500,
-						y: -500,
+						x: 500,
+						y: -250,
 					}}
 					animate={{
-						x: 50,
-						y: 0,
+						x: 15,
+						y: 115,
 						scale:1.5,
 					}}
 					whileTap={{
@@ -135,6 +139,30 @@ const RightSide = () => {
 					}}
 				>
 					<Phone />
+				</motion.div>
+			</div>
+
+			<div>
+				<motion.div
+					initial={{
+						x: -350,
+						y: -500,
+						
+					}}
+					animate={{
+						x: 0,
+						y: -35,
+						scale:1.5,
+					}}
+					whileTap={{
+						scale: 0.7,
+					}}
+					transition={{
+						delay: 0.5,
+						duration: 2,
+					}}
+				>
+					<Mail />
 				</motion.div>
 			</div>
 		</div>
